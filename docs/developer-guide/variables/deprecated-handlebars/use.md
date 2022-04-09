@@ -67,7 +67,8 @@ inputs:
 
 
 ## Common variables
-As you can see, there are a lot of common variables that can be used in your flow, some of the most common examples are : <code v-pre>{{ execution.id }}</code>, <code v-pre>{{ execution.startDate }}</code> that allows you to change a file name or sql query, for example.
+As you can see, there are a lot of common variables that can be used in your flow, some of the most common examples are: <code v-pre>{{ execution.id }}</code>, <code v-pre>{{ execution.startDate }}</code> 
+These allow you to change a file name or sql query, for example.
 
 ## Input variables
 Input variables are simple to access with <code v-pre>{{ execution.NAME }}</code>, where `NAME` is the name of the declared in your flow. The data will be dependent on the `type` of the inputs.
