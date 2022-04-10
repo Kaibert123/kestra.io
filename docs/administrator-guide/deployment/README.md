@@ -3,10 +3,10 @@ order: 1
 ---
 # Installation guide 
 
-We provide different way to deploy kestra, the recommended way are : 
+We provide many different ways to deploy Kestra, but the recommended ways include: 
 - [Docker](docker) for a local installation
 - [Kubernetes](kubernetes) for a production installation
 
-More information : 
+For more information, see: 
 
 <ChildTableOfContents />
