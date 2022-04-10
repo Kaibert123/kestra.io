@@ -5,7 +5,7 @@ order: 5
 
 Here, you will find the necessary information in order to deploy & configure your Kestra cluster.
 
-More information : 
+The following links will provide the information you need:
 
 
 <ChildTableOfContents />
