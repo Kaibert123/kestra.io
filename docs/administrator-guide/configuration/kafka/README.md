@@ -4,10 +4,10 @@ order: 1
 # Kafka configuration
 
 ## `kestra.kafka.client.properties`
-Most important configuration is to configure the way Kestra connect to Kafka cluster.
+The most important configuration is to configure the way Kestra connects to its Kafka cluster.
 
 
-Here is a minimal configuration example :
+Here is a minimal configuration example:
 ```yaml
 kestra:
   kafka:
@@ -19,7 +19,7 @@ kestra:
 ```
 
 
-Here is another example with a secure kafka cluster hosted by [aiven](https://aiven.io):
+Here is another example option, leveraging a secure kafka cluster hosted by [aiven](https://aiven.io):
 ```yaml
 kestra:
   kafka:
@@ -43,7 +43,7 @@ kestra:
 `properties` is the standard java kafka client properties, more details can be found [on Kafka Documentation](https://kafka.apache.org/documentation/)
 
 ## `kestra.kafka.defaults.topic`
-By default, Kestra automatically create all the topics needed, you can change partition & replication factor of these topics :
+By default, Kestra automatically creates all the topics needed, you can change the partition & replication factors of these topics :
 - `kestra.kafka.defaults.topic.partitions`: (default 16)
 - `kestra.kafka.defaults.topic.replication-factor`: (default 1)
 
@@ -101,9 +101,9 @@ kestra:
 ```
 
 ## `kestra.kafka.defaults.topic-prefix`
-This configuration allow you to change the topic prefix. By default, the prefix will be `kestra_`.
+This configuration allows you to change the topic prefix. By default, the prefix will be `kestra_`.
 
-For example, if you want to share a common Kafka cluster for the multiple instance of Kestra, just add another prefix like this :
+For example, if you want to share a common Kafka cluster for the multiple instances of Kestra, just add another prefix like this:
 
 ```yaml
 kestra:
@@ -113,10 +113,10 @@ kestra:
 ```
 
 ## `kestra.kafka.defaults.consumer-prefix`
-This configuration allow you to enable log for all messages from or to Kafka. Use this one to debug all the messages consume, produce or both from Kafka.
+This configuration allows you to enable logs for all messages from or to Kafka. Use this one to debug all the messages from Kafka consumed, produced, or both. 
 
 ::: warning
-This configuration have a huge performance impact, using regexp & serialization for most of the message
+This configuration can have a huge performance impact, using regexp & serialization for most of the message
 :::
 
 ```yaml
