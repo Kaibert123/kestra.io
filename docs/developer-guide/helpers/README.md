@@ -4,7 +4,7 @@ order: 10
 
 # Helpers
 
-Kestra have some *helpers* function that can help during flow development.
+Kestra provides *helpers* functionality that can help during flow development.
 
 ::: warning
 These helpers are only available during flow development in order to test on your local installation.
@@ -13,8 +13,8 @@ You must expand the flow definition before sending it to your server.
  
 ## Expand the flow to be uploaded to the server
 
-There is a convient task on Kestra executable that allow validation of the current flow and 
-will output the expanded version of your flow without any helper :
+There are convenient tasks on Kestra executables that allow validation of the current flow and 
+will output the expanded version of your flow without any helpers:
 
 ```bash
 ./kestra flow validate path-to-your-flow.yaml 
@@ -22,8 +22,8 @@ will output the expanded version of your flow without any helper :
   
 ## `[[> file.txt]]`: Include another file
 
-When doing a large flow, the flow can be messy when a lot of tasks are defined and 
-specially when you have some big text inside the flow (example, sql statement, ...).
+When performing a large flow, the flow can become messy if a lot of tasks are defined 
+especially if you have a great deal of text inside the flow (example, sql statement, ...).
 
 Let's take an example : 
 ```yaml
@@ -39,7 +39,7 @@ tasks:
     500 lines later
 ``` 
 
-You can replace the flow with this one : 
+You can replace the flow with the below: 
 ```yaml
 id: include
 namespace: io.kestra.tests
@@ -49,7 +49,7 @@ tasks:
   type: io.kestra.core.tasks.debugs.Return
   format: "[[> lorem.txt]]"
 ``` 
-and have a local file `lorem.txt` with the large content. 
+and create a local file `lorem.txt` to simulate the large content. 
 
 The path can be : 
 * `[[> lorem.txt]]`: a relative path from the flow (flow.yaml & lorem.txt are on the same directory)
@@ -59,5 +59,5 @@ The path can be :
 
 ::: warning
 Includes are resolved recursively, so you can include a file from another include. 
-Since this allow more complex things, you need to take care that included files don't contain `[[ .. ]]` . If you need to have the character in included files escape it with `\[[ ...]]` !
+Since this allows more complex operations, you need to take care that included files do not contain `[[ .. ]]` . If you need to have the character in included files, escape it with `\[[ ...]]` !
 :::
