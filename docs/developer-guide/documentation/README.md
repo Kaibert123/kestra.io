@@ -3,18 +3,18 @@ order: 11
 ---
 # Document your flow
 
-You can document from flow, task, ... in order to explain what is the goal of the current element.
+You can create documentation from flows, tasks, etc,... in order to explain the goal of the current element.
 
-For this, Kestra allow to add a `description` attribute where you can write some documentation of the current element.
-Description must be written on [Markdown](https://en.wikipedia.org/wiki/Markdown).
+For this, Kestra allows you to add a `description` attribute in which you can write some documentation of the current element.
+Descriptions must be written as [Markdown](https://en.wikipedia.org/wiki/Markdown).
 
-You can add `description` attribute on : 
-- [Flow](../flow)
-- [Task](../flow)
+You can add the `description` attribute on : 
+- [Flows](../flow)
+- [Tasks](../flow)
 - [Listeners](../listeners)
 - [Triggers](../triggers)
 
-All description will be visible on the ui : 
+All descriptions will be visible in the ui : 
 
 ![Flow list](./docs-ui-1.png)
 
